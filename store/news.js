@@ -88,23 +88,23 @@ const actions = {
                 store.commit('setError', error);
             })
         },
-        gantiKategori(store,{payload,jumlahTekan}){
+        gantiKategori(store,payload){
             console.log("Origin :", store.state.listOrigin);
             // store.commit('setListArtikel', store.state.listOrigin)
             // store.commit('setKategori', payload)
             // const result = store.state.listArtikel.filter(cek => cek.level == store.state.Kategori);
             // store.commit('setListArtikel', result)
             // console.log(result)
-            store.commit("setJumlahTekan",jumlahTekan)
-            console.log(store.state.jumlahTekan)
+            // store.commit("setJumlahTekan",jumlahTekan)
+            // console.log(store.state.jumlahTekan)
                 store.state.linkBaru = store.state.link + "/level/" + payload
                 store.commit('setURL', store.state.linkBaru)
                 store.dispatch('fetchArtikel')
                 console.log(store.state.linkBaru)
                 const reset = 'https://digimon-api.vercel.app/api/digimon'
-                const tekan = 0    
+                // const tekan = 0    
                 store.commit('setURL', reset)
-                store.commit('setJumlahTekan', tekan)
+                // store.commit('setJumlahTekan', tekan)
             
         },
         searchFunction(store,payload){
